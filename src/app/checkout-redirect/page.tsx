@@ -13,7 +13,7 @@ const Page: NextPage = () => {
     const isFailure = searchParams.get('cancel')
 
     const handleCheckout = async () => {
-        const response = await fetch('https://stripe-poc-gustavohekel.vercel.app/api/checkout', {
+        const response = await fetch('api/checkout', {
             method: 'post'
         })
         const stripeResponse = await response.json()
